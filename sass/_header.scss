@@ -1,0 +1,92 @@
+.header {
+    background-color: $color-beige-light;
+    
+    box-shadow: 0 10px 6px -6px rgba(#777, .7);
+    z-index: 5;
+    padding: 3rem;
+    grid-column: start/end;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content minmax(min-content, max-content) max-content;
+    grid-column-gap: 2rem;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: center;
+    @media only screen and (min-width: $medium-screen) {
+       
+        &__photo {
+            display: none;
+        }
+       
+    }
+    @media only screen and (max-width: $medium-screen) {
+        grid-template-columns: min-content minmax(min-content, max-content) max-content;
+    }
+    @media only screen and (max-width: $small-screen) {
+        padding: 1.5rem !important;
+        grid-gap: 1rem !important;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+        &__photo {
+            display: none;
+        }
+        &__text {
+            padding: 1.5rem !important;
+            grid-column: 1/-1;
+            margin-left: 0 !important;       
+        }
+    }
+
+    
+    &__text {
+        padding: 2rem 5rem;
+        grid-column: 2/3;
+        margin-left: 3rem;       
+    }
+    &__photo {
+        width: 20rem;
+        height: 20rem;
+        filter: grayscale(100%);
+        border-radius: 50%;
+        box-shadow: 0 1rem 2rem rgba(black, .35);
+        grid-column: 1/2;
+        margin-right: -5rem;
+    }
+    // &__heading-1 {
+
+    // }
+    // &__heading-3 {
+        
+    // }
+    // &__heading-4 {
+
+    // }
+    &__button {
+        color: $color-navy;
+        padding: 2.5rem 5rem;
+        font-size: 2.5rem;
+        grid-column: 3/4;
+        align-self: center;
+        justify-self: center;
+        transition: all .2s;
+        font-weight: 500;
+        outline: none;
+       
+        &:hover {
+            background-color: darken($color: $color-blue-light, $amount: 4);
+            box-shadow: 0 2rem 2rem rgba(black, .2);
+        }
+        &:active {
+            box-shadow: 0 1rem 2rem rgba(black, .2);
+            outline: none;
+        }
+    }
+    &__logo {
+        width: 15rem;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-self: center;
+       
+        
+    }
+}

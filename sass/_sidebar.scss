@@ -1,0 +1,108 @@
+.sidebar {
+    background-image: linear-gradient(to bottom, rgba($color-blue, .8), rgba($color-beige, .8)),
+                        url(../img/palm-sea.jpg);
+    background-size: cover;
+    background-position: top;     
+    // box-shadow: 2rem 2rem 10rem rgba(black, .2);    
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 14px 28px rgba(#777, .9);           
+    grid-column: sidebar/sidebar-end;
+    grid-row: 1/-1;
+
+    @media only screen and (max-width: $medium-screen) {
+       
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        box-shadow: none;
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-around;
+        flex-shrink: 1;
+        grid-gap: 3rem;
+        align-items: center;
+        background-image: linear-gradient(to right, rgba($color-blue, .8), rgba($color-blue, .8)),
+        url(../img/palm-sea.jpg);
+        &__photo {
+            display: none;
+        }
+        &__mail-icon{
+    
+        }
+        &__icon {
+            display: block;
+            width: 4rem !important;
+            height: 4rem !important;
+            box-shadow: none !important;
+        
+        
+        }
+      
+    }
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    justify-content: flex-end;
+    justify-items: center;
+    align-items: center;
+    align-content: flex-start;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 3.5rem;
+    z-index: 10;
+
+    &__photo {
+        width: 24rem;
+        height: 24rem;
+        filter: grayscale(100%);
+        border-radius: 50%;
+        box-shadow: 0 1rem 2rem rgba(black, .35);
+        grid-column: 1/-1;
+        margin: 3rem 0;
+        
+    }
+    &__mail {
+        &-icon {
+            width: 3rem;
+            height: 3rem;
+            grid-column: 1/2;
+            margin-left: 3rem;
+            
+          
+        }
+        &-address {
+           font-size: 2rem;
+        }
+
+    }
+    &__phone {
+        &-icon {
+            width: 3rem;
+            height: 3rem;
+            grid-column: 1/2;
+            margin-right: -4rem;
+
+        }
+        &-number {
+            font-size: 2rem;
+        }
+
+
+    }
+    &__link {
+        grid-column: 2/3;
+    }
+    &__icon {
+        display: block;
+        width: 4.5rem;
+        height: 4.5rem;
+        box-shadow: $icon-shadow;
+        transition: all .2s;
+       &-git {
+           border-radius: 50%;
+        }
+        &:hover {
+            box-shadow: 0 1rem 1rem rgba(black, .35);
+            transform: translateY(-2px);
+            
+           }
+    
+    }
+}

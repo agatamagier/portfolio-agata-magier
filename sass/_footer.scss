@@ -1,0 +1,12 @@
+.footer {
+    background-color: $color-navy;
+    color: #fff;
+    grid-column: start/end;
+    &__text {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 3rem 0;
+        letter-spacing: 2px;
+        color: $color-beige-light;
+    }
+}

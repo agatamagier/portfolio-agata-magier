@@ -1,0 +1,36 @@
+%heading {
+    font-family: $font-main;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 6rem;
+    color: $color-navy;
+    line-height: 1;
+   
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4rem;
+    line-height: 1;
+    color: $color-navy;
+    letter-spacing: 25px;
+
+}
+.heading-3 {
+    @extend %heading;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: $color-navy;
+    
+}
+.heading-4 {
+    @extend %heading;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: $color-beige-dark;
+
+}
