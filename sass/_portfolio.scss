@@ -24,6 +24,7 @@
     &__img {
         width: 100%;
         height: auto;
+        border-radius: 5px;
         grid-column: 1/-1;
         box-shadow: 0 10px 6px -6px rgba(#777, .6);
     }

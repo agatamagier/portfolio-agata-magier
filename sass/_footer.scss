@@ -2,6 +2,7 @@
     background-color: $color-navy;
     color: #fff;
     grid-column: start/end;
+    order: 10;
     &__text {
         font-size: 1.2rem;
         text-align: center;
@@ -9,4 +10,5 @@
         letter-spacing: 2px;
         color: $color-beige-light;
     }
+   
 }

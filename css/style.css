@@ -58,12 +58,12 @@ body {
   border: none;
   padding: 1.5rem 4rem;
   text-transform: uppercase;
-  background-color: #d7fafa;
+  background-color: #005859;
   border-radius: 100px;
   text-align: center; }
 
 .header {
-  background-color: #fff0d1;
+  background-color: rgba(255, 240, 209, 0.5);
   box-shadow: 0 10px 6px -6px rgba(119, 119, 119, 0.7);
   z-index: 5;
   padding: 3rem;
@@ -92,7 +92,9 @@ body {
       .header__text {
         padding: 1.5rem !important;
         grid-column: 1/-1;
-        margin-left: 0 !important; } }
+        margin-left: 0 !important; }
+      .header__button {
+        margin-left: -2.5rem; } }
   .header__text {
     padding: 2rem 5rem;
     grid-column: 2/3;
@@ -106,7 +108,7 @@ body {
     grid-column: 1/2;
     margin-right: -5rem; }
   .header__button {
-    color: #004445;
+    color: #fff0d1;
     padding: 2.5rem 5rem;
     font-size: 2.5rem;
     grid-column: 3/4;
@@ -116,7 +118,7 @@ body {
     font-weight: 500;
     outline: none; }
     .header__button:hover {
-      background-color: #c5f8f8;
+      background-color: #003f40;
       box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2); }
     .header__button:active {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -203,23 +205,29 @@ body {
 .experience {
   grid-column: start/end;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 1fr;
   grid-column-gap: 3rem; }
+  @media only screen and (max-width: 62.5em) {
+    .experience {
+      order: 1; } }
   @media only screen and (max-width: 48em) {
     .experience {
       grid-template-columns: 1fr;
       align-items: center;
       justify-items: center;
-      grid-row-gap: 1.5rem; } }
+      grid-row-gap: 1.5rem;
+      order: 1; } }
 
 .schools_and_jobs {
-  background-color: rgba(255, 240, 209, 0.5);
+  background-color: #fff;
   display: grid;
   grid-template-rows: repeat(7, min-content);
-  grid-row-gap: 2rem; }
+  grid-row-gap: 2rem;
+  padding: 3rem; }
   @media only screen and (max-width: 48em) {
     .schools_and_jobs {
-      grid-row-gap: 1rem; } }
+      grid-row-gap: 1rem;
+      order: 1; } }
   .schools_and_jobs__heading {
     justify-self: center;
     padding: 2.5rem 0 0 0;
@@ -229,10 +237,10 @@ body {
 
 .school {
   display: grid;
-  grid-template-columns: min-content 1fr minmax(min-content, 50%);
-  justify-content: space-between;
+  grid-template-columns: min-content minmax(min-content, 1fr) minmax(min-content, 1fr);
+  justify-content: flex-start;
   grid-column-gap: 2rem;
-  align-content: flex-start; }
+  align-content: center; }
   @media only screen and (max-width: 48em) {
     .school {
       grid-template-columns: min-content 1fr 1fr;
@@ -246,14 +254,14 @@ body {
     display: block;
     margin-left: 2rem; }
   .school__name {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase; }
   .school__link, .school:active, .school:link {
     grid-column: 3/4;
     text-decoration: none;
     color: currentColor;
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all .2s; }
     .school__link:hover, .school:active:hover, .school:link:hover {
@@ -263,7 +271,7 @@ body {
 .job {
   background-color: #fff;
   display: grid;
-  grid-template-columns: repeat(2, min-content) repeat(2, minmax(min-content, 1fr));
+  grid-template-columns: repeat(2, min-content) repeat(2, minmax(min-content, 50%));
   justify-content: flex-start;
   color: #004445;
   align-content: center;
@@ -281,24 +289,24 @@ body {
     height: 3rem;
     margin-left: 2rem; }
   .job__years {
-    font-size: 1.8rem; }
+    font-size: 1.5rem; }
   .job__title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-transform: uppercase; }
   .job__place {
-    font-size: 1.8rem;
-    justify-self: flex-end;
-    margin-right: 1.5rem; }
+    font-size: 1.5rem; }
 
 .courses {
-  background-color: #fff;
+  background-color: rgba(255, 240, 209, 0.5);
   display: grid;
   grid-template-rows: repeat(11, min-content);
   grid-row-gap: 1.5rem;
-  border-left: 0.5px solid #fff0d1; }
+  padding: 3rem;
+  justify-content: center; }
   @media screen and (max-width: 48em) {
     .courses {
-      border-left: none; } }
+      order: 0;
+      width: 100%; } }
   .courses__heading {
     margin-bottom: 2rem;
     justify-self: center;
@@ -323,7 +331,7 @@ body {
   .course__link, .course:link, .course:active {
     text-decoration: none;
     color: currentColor;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all .2s; }
     .course__link:hover, .course:link:hover, .course:active:hover {
@@ -389,6 +397,7 @@ body {
   .project__img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
     grid-column: 1/-1;
     box-shadow: 0 10px 6px -6px rgba(119, 119, 119, 0.6); }
   .project__link {
@@ -413,7 +422,8 @@ body {
 .footer {
   background-color: #004445;
   color: #fff;
-  grid-column: start/end; }
+  grid-column: start/end;
+  order: 10; }
   .footer__text {
     font-size: 1.2rem;
     text-align: center;

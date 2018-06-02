@@ -1,5 +1,5 @@
 .header {
-    background-color: $color-beige-light;
+    background-color: rgba($color-beige-light, .5);
     
     box-shadow: 0 10px 6px -6px rgba(#777, .7);
     z-index: 5;
@@ -35,6 +35,9 @@
             grid-column: 1/-1;
             margin-left: 0 !important;       
         }
+        &__button {
+            margin-left: -2.5rem;
+        }
     }
 
     
@@ -62,7 +65,7 @@
 
     // }
     &__button {
-        color: $color-navy;
+        color: $color-beige-light;
         padding: 2.5rem 5rem;
         font-size: 2.5rem;
         grid-column: 3/4;
@@ -73,7 +76,7 @@
         outline: none;
        
         &:hover {
-            background-color: darken($color: $color-blue-light, $amount: 4);
+            background-color: darken($color: $color-navy, $amount: 1);
             box-shadow: 0 2rem 2rem rgba(black, .2);
         }
         &:active {
