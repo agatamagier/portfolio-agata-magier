@@ -161,7 +161,9 @@ body {
         display: block;
         width: 4rem !important;
         height: 4rem !important;
-        box-shadow: none !important; } }
+        box-shadow: none !important; }
+      .sidebar__phone-icon {
+        margin-right: 0 !important; } }
   .sidebar__photo {
     width: 24rem;
     height: 24rem;
