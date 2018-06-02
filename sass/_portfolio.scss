@@ -1,5 +1,5 @@
 .portfolio {
-    background-color: #fff;
+    background-color: $color-main-background;
     grid-column: main/main-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -21,18 +21,24 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
     justify-items: center;
+    @media only screen and (max-width: $big-screen) {
+        &__link-icon {
+            width: 5rem !important;
+            height: 5rem !important;
+        }
+    }
     &__img {
         width: 100%;
         height: auto;
         border-radius: 5px;
         grid-column: 1/-1;
-        box-shadow: 0 10px 6px -6px rgba(#777, .6);
+        box-shadow: 0 10px 7px -7px rgba(#777, .5);
     }
     &__link, {
         margin-top: 1rem;
         &-icon {
-            width: 3rem;
-            height: 3rem;
+            width: 4rem;
+            height: 4rem;
             fill: $color-navy;
             margin-top: 1rem;
             box-shadow: $icon-shadow;

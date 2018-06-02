@@ -9,6 +9,7 @@ $color-beige-dark:#b7995e;
 $color-blue: #a7feff;
 $color-blue-light: #d7fafa;
 $color-navy: #004445;
+$color-main-background: #f9f9f9;
 
 $icon-shadow: 0 1rem 1rem rgba(black, .2);
 
@@ -33,7 +34,7 @@ html {
 }
 
 body {
- 
+    background-color: #fafafa;
     font-family: $font-main;
     color: $color-navy;
     font-weight: 300;

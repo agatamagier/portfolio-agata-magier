@@ -1,5 +1,5 @@
 .skills {
-    background-color: #fff;
+    background-color: $color-main-background;
     padding: 4rem;
     grid-column: main/main-end;
     display: grid;
@@ -28,10 +28,11 @@
         border-bottom: 1px solid $color-navy;
     }
     &__icon {
+        background-color: transparent;
         height: 8rem;
         width: auto;
         align-self: center;
-        box-shadow: 0 2rem 3rem rgba(black, .2);
+        box-shadow: 0 1rem 2rem rgba(black, .2);
         border-radius: 15px;
         transition: all .2s;
       
