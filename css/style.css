@@ -165,7 +165,8 @@ body {
       padding: 5px;
       align-items: center;
       align-content: center;
-      background-image: linear-gradient(to right, rgba(167, 254, 255, 0.8), rgba(167, 254, 255, 0.8)), url(../img/palm-sea.jpg); }
+      background-image: linear-gradient(to right, rgba(167, 254, 255, 0.8), rgba(167, 254, 255, 0.8)), url(../img/leafe-2-horizontal.jpg);
+      background-position: center; }
       .sidebar > * {
         margin: 1rem !important; }
       .sidebar__photo {

@@ -22,7 +22,9 @@
         align-items: center;
         align-content: center;
         background-image: linear-gradient(to right, rgba($color-blue, .8), rgba($color-blue, .8)),
-        url(../img/palm-sea.jpg);
+        url(../img/leafe-2-horizontal.jpg);
+        background-position: center;
+        
         &>* {
             margin: 1rem !important;
         }
