@@ -13,6 +13,9 @@
         color: $color-navy;
         border-bottom: 1px solid $color-navy;
     }
+    @media only screen and (max-width: $mobile-screen) {
+        grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+    }
 }
 .project {
     display: grid;

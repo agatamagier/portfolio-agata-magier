@@ -16,7 +16,7 @@ $icon-shadow: 0 1rem 1rem rgba(black, .2);
 $big-screen: 75em; //1200px/16px;
 $medium-screen: 62.5em;  //1000px
 $small-screen: 48em; //768px
-$mobile-screen: 26em;
+$mobile-screen: 33em; //528px
 *,
 *::before,
 *::after {
@@ -50,6 +50,11 @@ body {
     @media only screen and (max-width: $medium-screen) {
         grid-template-rows: 7rem minmax(min-content, 30vh) min-content max-content repeat(3, min-content);
         grid-template-columns: [start] minmax(6rem, 1fr) [main]repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [main-end] minmax(6rem, 1fr)[end] ;
+    }
+    @media only screen and (max-width: $mobile-screen) {
+        // grid-template-rows: 7rem minmax(min-content, 30vh) min-content max-content repeat(3, min-content);
+        grid-template-rows: 7rem minmax(min-content, 30vh);
+      
     }
    
 }
